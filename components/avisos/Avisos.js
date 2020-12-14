@@ -12,4 +12,15 @@ function salvar(aviso) {
         })
 }
 
-module.exports = { salvar }
+function selecionarTodos(){
+    return db.select("*").from("avisos")
+    .then(avisos =>{
+        return avisos
+    })
+
+    .catch(err => {
+        return { tipo: "erro", corpo: "Erro" + err }
+    })
+}
+
+module.exports = { salvar, selecionarTodos }

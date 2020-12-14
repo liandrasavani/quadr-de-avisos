@@ -12,6 +12,8 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
+app.locals.moment = require('moment')
+
 //configurar o bodyparser
 app.use(routerAvisos)
 
