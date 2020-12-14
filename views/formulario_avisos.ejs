@@ -1,6 +1,9 @@
 <%- include('./partials/head') %>
 
 <body>
+
+<%- include('./partials/navbar') %>
+
     <div class="container">
         <br><br>
         
@@ -36,6 +39,7 @@
 
                 <form action="/avisos/novo" method="POST">
                     <div class="form-group">
+                        <br>
                         <label for="titulo">Título</label>
                         <input id="titulo" name="titulo" placeholder="Digite o titulo do aviso" type="text"
                             class="form-control" required>
