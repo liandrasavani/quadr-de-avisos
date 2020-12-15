@@ -23,4 +23,8 @@ function selecionarTodos(){
     })
 }
 
-module.exports = { salvar, selecionarTodos }
+function excluir(id){
+    return db.del().from('avisos').where('ID_avisos',id)
+}
+
+module.exports = { salvar, selecionarTodos, excluir }
