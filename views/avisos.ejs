@@ -4,6 +4,7 @@
 
 <%- include('./partials/navbar') %>
 
+
     <div class="container">
         <br><br>
         <a href="#"><i class="fas fa-long-arrow-alt-left"></i>Voltar</a> <br> <br>
@@ -81,7 +82,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="excluir(event,'<%= aviso.ID_avisos %>')">Não</button>
           <form id="form-excluir" method="GET">
-            <button type="submit" class="btn btn-primary">Sim</button>
+            <a href="avisos/editar/<%= aviso.ID_avisos %>" type="submit" class="btn btn-primary">Sim</button>
           </form>
         </div>
       </div>
